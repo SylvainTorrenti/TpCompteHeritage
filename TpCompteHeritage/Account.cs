@@ -9,27 +9,36 @@ namespace TpCompteHeritage
     internal class Account
     {
         #region Attribute
-        private static int _accountNb = 0;
+        private static int _nbAccount = 0;
         private double _balance;
-        #endregion
+        private int _accountNB;
 
+        #endregion
         #region Get & Set AccountNb
-        public static int AccountNb { get => _accountNb; private set => _accountNb = value; } 
+        public static int NbAccount { get => _nbAccount; set => _nbAccount = value; }
         #endregion
-        public double Balance { get => _balance; private set => _balance = value; }
-
+        #region Get & Set Balance
+        public double Balance { get => _balance; set => _balance = value; }
+        #endregion
+        #region Get & Set AccountNB
+        public int AccountNB { get => _accountNB; set => _accountNB = value; }
+        #endregion
+        #region Constructor
         public Account()
         {
-            AccountNb += 1;
+            NbAccount += 1;
             Balance = 0;
+            AccountNB = NbAccount;
         }
 
         public Account(int balance)
         {
             Balance = balance;
-            AccountNb += 1;
+            NbAccount += 1;
+            AccountNB = NbAccount;
         }
-
+        #endregion
+        #region Method
         public double Deposit(double amount)
         {
             return Balance += amount;
@@ -38,9 +47,11 @@ namespace TpCompteHeritage
         {
             return Balance -= amount;
         }
-       public void ToString()
+        public void ToString()
         {
+            Console.WriteLine($"Le numero du compte : {AccountNB}");
             Console.WriteLine($"Le solde du compte est de : {Balance}");
-        }
+        } 
+        #endregion
     }
 }

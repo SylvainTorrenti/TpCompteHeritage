@@ -22,5 +22,7 @@ Account1.Deposit(15000);
 Account2.Deposit(15000);
 Account1.ToString();
 Console.WriteLine("*************");
-Account2.ToString(); 
+Account2.ToString();
 #endregion
+SavingsAccount SavingsAccount1 = new SavingsAccount(Account1);
+SavingsAccount1.ToString();
