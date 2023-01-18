@@ -2,6 +2,7 @@
 
 #region Create 1 account
 Console.WriteLine("         ****Compte Basique****");
+Console.WriteLine();
 Account Account1 = new Account();
 Account1.ToString(); 
 #endregion
@@ -12,21 +13,27 @@ Account2.ToString();
 #endregion
 Console.WriteLine("--------------");
 #region Withdraw
+Console.WriteLine();
 Console.WriteLine("         ****Retirer d'un compte basique****");
+Console.WriteLine();
 Console.WriteLine($"Le solde du compte 1 aprés un retrait de 5000 euros : {Account1.Withdraw(5000)}");
 Console.WriteLine("--------------");
 Console.WriteLine($"Le solde du compte 2 aprés un retrait de 5000 euros : {Account2.Withdraw(5000)}");
 #endregion
 Console.WriteLine("--------------");
 #region Deposit
+Console.WriteLine();
 Console.WriteLine("         ****Compte depot dans un compte basique****");
+Console.WriteLine();
 Console.WriteLine($"Le solde du compte 1 aprés un depot de 15000 euros : {Account1.Deposit(15000)}");
 Console.WriteLine("--------------");
 Console.WriteLine($"Le solde du compte 1 aprés un depot de 15000 euros : {Account2.Deposit(15000)}");
 #endregion
 Console.WriteLine("--------------");
 #region Saving Account
+Console.WriteLine();
 Console.WriteLine("         ****Compte Epargne****");
+Console.WriteLine();
 SavingsAccount SavingsAccount1 = new SavingsAccount(30000);
 SavingsAccount1.ToString();
 Console.WriteLine("--------------");
@@ -34,7 +41,9 @@ Console.WriteLine($"Le solde du compte epargne aprés calcul des interet : {Savi
 #endregion
 Console.WriteLine("--------------");
 #region Paid account
+Console.WriteLine();
 Console.WriteLine("         ****Compte Payant****");
+Console.WriteLine();
 PaidAccount PaidAccount1 = new PaidAccount(50000);
 PaidAccount1.ToString();
 Console.WriteLine("--------------");
