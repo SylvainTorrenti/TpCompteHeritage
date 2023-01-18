@@ -12,16 +12,25 @@ namespace TpCompteHeritage
 
         public int Interest { get => _interest; set => _interest = value; }
 
-        public SavingsAccount(Account account)
+        public SavingsAccount()
         {
-            Balance = account.Balance;
-            AccountNB = account.AccountNB;
+            NbAccount += 1;
+        }
+
+        public SavingsAccount(int balance)
+        {
+            Balance = balance;
+            NbAccount += 1;
         }
         public void ToString()
         {
             Console.WriteLine($"Le numero du compte : {AccountNB}");
             Console.WriteLine($"Le solde du compte est de : {Balance}");
-          
+
+        }
+        public double CalculateInterest(SavingsAccount savingsAccount)
+        {
+            return Balance = Balance * 1.06;
         }
     }
 }

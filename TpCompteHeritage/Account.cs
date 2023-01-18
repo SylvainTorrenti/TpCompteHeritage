@@ -11,7 +11,7 @@ namespace TpCompteHeritage
         #region Attribute
         private static int _nbAccount = 0;
         private double _balance;
-        private int _accountNB;
+        private double _accountNB;
 
         #endregion
         #region Get & Set AccountNb
@@ -21,7 +21,7 @@ namespace TpCompteHeritage
         public double Balance { get => _balance; set => _balance = value; }
         #endregion
         #region Get & Set AccountNB
-        public int AccountNB { get => _accountNB; set => _accountNB = value; }
+        public double AccountNB { get => _accountNB; set => _accountNB = value; }
         #endregion
         #region Constructor
         public Account()
